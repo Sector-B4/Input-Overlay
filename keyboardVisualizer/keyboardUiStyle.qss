@@ -1,0 +1,62 @@
+/* =========================================================================
+   MAIN CHASSIS FRAME
+   ========================================================================= */
+#keyboardBase {
+    background-color: rgba(18, 18, 18, 0.8);      /* Dark charcoal backplane background */
+    /*border: 2px dotted #840000;       Subtle physical border edge */
+    border-radius: 12px;           /* Smooth rounded chassis corners */
+}
+
+/* =========================================================================
+   INDIVIDUAL KEYCAPS (UNPRESSED STATE)
+   ========================================================================= */
+QLabel {
+    background-color: rgba(12, 12, 12, 0.8);      /* Off-black keycap face */
+    border: 1px solid #840000;      /* Dark blood-red accent border from Figma */
+    border-radius: 6px;             /* Crisp, subtle keycap corner smoothing */
+    
+    /* Text Typography Properties */
+    color: #e5e5e5;                 /* High contrast clean white/gray text */
+    font-family: "Segoe UI", "Arial", sans-serif;
+    font-size: 11px;
+    font-weight: 600;               /* Semi-bold weighting for neat legibility */
+}
+
+/* =========================================================================
+   ACTIVATED KEYCAPS (PRESSED / LIT STATE)
+   ========================================================================= */
+QLabel[active="true"] {
+    background-color: #840000;      /* Signature deep red active container glow */
+    border: 1px solid #ff1a1a;      /* High-intensity bright red border pop */
+    color: #ffffff;                 /* Pure white text when illuminated */
+}
+
+/* =========================================================================
+   KEY-SPECIFIC DESIGN TWEAKS
+   ========================================================================= */
+/* Make the custom spacebar branding text stand out with slightly relaxed spacing */
+#key_32 {
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #aaaaaa;
+}
+
+#key_32[active="true"] {
+    color: #ffffff;
+}
+#key_20[active="true"] {
+    background-color: #840000; /* Stays this color when ON */
+    color: #ffffff;
+}
+
+/* Update the dimmed modifier text rule to include key 160 (LShift) and key 91 (Win) */
+#key_160, #key_161, #key_162, #key_163, #key_164, #key_165, #key_91, #key_20, #key_9, #key_8, #key_13 {
+    color: #888888;
+}
+
+#key_160[active="true"], #key_161[active="true"], #key_162[active="true"], 
+#key_163[active="true"], #key_164[active="true"], #key_165[active="true"], 
+#key_91[active="true"], #key_20[active="true"], #key_9[active="true"], 
+#key_8[active="true"], #key_13[active="true"] {
+    color: #ffffff;
+}

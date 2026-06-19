@@ -1,0 +1,56 @@
+/* ==============================================================================
+   MAIN OUTER SHELL
+   ============================================================================== */
+StyledFrame#mouseBase {
+    background-color: rgba(18, 18, 18, 0.8);
+    border: 2px solid #840000;
+    border-radius: 80px; /* Perfectly rounds the top and bottom of the mouse capsule */
+}
+
+/* ==============================================================================
+   LEFT CLICK PANEL
+   ============================================================================== */
+StyledFrame#mouseLeft {
+    background-color: transparent;
+    border: 1px solid #840000;
+    
+    /* Clear out inherited parent radius values first */
+    border-radius: 0px; 
+    border-top-left-radius: 59px;
+}
+
+/* Dynamic active state trigger for left click */
+StyledFrame#mouseLeft[active="true"] {
+    background-color: #840000; /* Subtle dark red glow on press */
+}
+
+/* ==============================================================================
+   RIGHT CLICK PANEL
+   ============================================================================== */
+StyledFrame#mouseRight {
+    background-color: transparent;
+    border: 1px solid #840000;
+    
+    /* Clear out inherited parent radius values first */
+    border-radius: 0px;
+    border-top-right-radius: 59px;
+}
+
+/* Dynamic active state trigger for right click */
+StyledFrame#mouseRight[active="true"] {
+    background-color: #840000;
+}
+
+/* ==============================================================================
+   SCROLL WHEEL / MIDDLE CLICK
+   ============================================================================== */
+StyledFrame#mouseMiddle {
+    background-color: transparent;
+    border: 1px solid #840000;
+    border-radius: 6px; /* Pill-shaped center scroll capsule */
+}
+
+/* Dynamic active state trigger for middle click */
+StyledFrame#mouseMiddle[active="true"] {
+    background-color: #840000; /* Fills solid red when pressed */
+}
